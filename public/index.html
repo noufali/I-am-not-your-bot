@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<title> I-am-not-your-bot </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.socket.io/socket.io-1.7.3.js"></script>
+	<script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
+
+	<body>
+		<div id = "instructions">
+			<h1><center>
+				Instructions on how to make Alice like you:
+			</center></h1>
+			<ol style="margin-left: 18px;">
+				<li> Call her at (240)-318-7370 </li>
+				<li> Ask her how she is </li>
+				<li> Say please and thank you </li>
+				<li> Get to know her by asking her these questions </li>
+			</ol>
+		</div>
+		<div id ="aliceDiv">
+
+			<form id = "alice" action = "/alice" method = "POST">
+				<input type="text" name="old" class="question" id="1st" required autocomplete="off" />
+				<label for="1st"><span>How old is Alice?</span></label>
+				<!-- <textarea name="message" rows="2" class="question" id="msg" required autocomplete="off"></textarea> -->
+				<input type="text" name="from" class="question" id="2nd" required autocomplete="off" />
+				<label for="2nd"><span>Where is Alice from?</span></label>
+
+				<input type="text" name="color" class="question" id="3rd" required autocomplete="off" />
+				<label for="3rd"><span>What is Alice's favorite color?</span></label>
+
+				<input type="text" name="hobby" class="question" id="4th" required autocomplete="off" />
+				<label for="4th"><span>What is Alice's favorite hobby?</span></label>
+
+				<input type="text" name="study" class="question" id="5th" required autocomplete="off" />
+				<label for="5th"><span>What did Alice study in college?</span></label>
+
+				<input type="submit" value="Submit!" />
+			</form>
+		</div>
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+		$('#alice').submit(function(e) {
+			e.preventDefault();
+			console.log('I am submitted!');
+
+			$.ajax({
+			    url: '/alice',
+				type:'POST',
+				data: {
+					old: $("[name='old']").val(),
+					from: $("[name='from']").val(),
+					color: $("[name='color']").val(),
+					hobby: $("[name='hobby']").val(),
+					study: $("[name='study']").val(),
+				},
+			  success: function(data) {
+				console.log('worked');
+				console.log(data);
+				if (data.old == '24' && data.from == 'estonia' && data.color == 'black' && data.hobby == 'swimming' && data.study == 'literature') {
+					$('body').append('<p> Correct answers. Alice has decided to like you </p>');
+				} else {
+					$('body').append('<p> Wrong answers. Alice has decided she does not like you </p>');
+				}
+			  },
+			  error: function() {
+				console.log('did not work');
+			  }
+			});
+		});
+	});
+	</script>
