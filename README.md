@@ -10,14 +10,14 @@ For this project, I used the Twilio’s Speech API library to handle incoming ca
 
 <img width="1440" alt="1" src="https://user-images.githubusercontent.com/22034616/35656713-cd5ea37e-06c6-11e8-98b0-21ea4d78e09d.png">
 
-2.User calls Alice. Server is collecting conversation.
+2. User calls Alice. Server is collecting conversation.
 
 <img width="1440" alt="2" src="https://user-images.githubusercontent.com/22034616/35656792-3d976824-06c7-11e8-807d-b05ef5a3f433.png">
 
-3.Finished phone conversation with Alice. User is filling out form to see how much they remember about their conversation with Alice.
+3. Finished phone conversation with Alice. User is filling out form to see how much they remember about their conversation with Alice.
 
 <img width="1440" alt="3" src="https://user-images.githubusercontent.com/22034616/35656793-3da59b4c-06c7-11e8-9712-62f9df3b7fc7.png">
 
-4.Submitting responses will reveal how Alice feels about you.
+4. Submitting responses will reveal how Alice feels about you.
 
 <img width="1440" alt="4" src="https://user-images.githubusercontent.com/22034616/35656794-3db1f766-06c7-11e8-9f84-3b7ae86b4865.png">
