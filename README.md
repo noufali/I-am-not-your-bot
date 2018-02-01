@@ -4,5 +4,5 @@ I was inspired to create a bot that had a role opposite to what we always presum
 
 For this project, I used the Twilio’s Speech API library to handle incoming calls, to output speech from my bot, and to gather speech input from the user. I then used Rivescript to script a conversation which was then fed back into my Twilio bot to respond to the user.
 
-1. 
-<img width="1437" alt="2" src="https://cloud.githubusercontent.com/assets/22034616/25672780/0e69b700-3003-11e7-937c-747d3f17a478.png">
+1. Go to http://138.197.87.20:8800 to read instructions on how to talk with Alice.
+<img width="1440" alt="1" src="https://user-images.githubusercontent.com/22034616/35656713-cd5ea37e-06c6-11e8-98b0-21ea4d78e09d.png">
